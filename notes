@@ -1,0 +1,32 @@
+image.shape ->  torch.tensor([1, 28, 28])
+
+1 is there because this is a grayscale image. So, there's just a single color channel for black or white. So, 0 would be one extreme value and then 1 would be the other extreme value. Sometimes they scale from -1 to 1 instead of 0 to 1 depending upon from where we download it.
+
+
+Matplotlib has a default color mapping. Default one is called as viridis. It essentially just maps the raw values to some sort of color scale and the default color scale goes from like a dark purple to lighter yellow color 
+
+
+cmap = 'gray'
+
+its opposite is
+
+cmap = 'gist_yarg'
+
+If the dataset is not evenly divisible into the dataset then the final batch would contain that remainder and setting shuffle to true means
+that the dataset will be shuffled after each epcoh.
+
+0 corresponds to the dark most color -> black
+255 corresponds to the bright most color -> white
+
+
+
+http://setosa.io/ev/image-kernels/
+
+https://wipro.udemy.com/complete-guide-to-tensorflow-for-deep-learning-with-python/
+
+
+ANNs
+
+ -> Large amount of parameters (over 100,000 for tiny 28 by 28 images)
+ -> We will lose all 2D information by flattening out the image
+ -> will only work on very similar(images), well centered images
